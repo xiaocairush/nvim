@@ -1,1 +1,1 @@
-# vimrc
+# my config for neovim
