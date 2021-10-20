@@ -266,14 +266,13 @@ noremap <LEADER>q <C-w>j:q<CR>
 " === Tab management
 " ===
 " Create a new tab with tu
-noremap tu :tabe<CR>
-noremap tU :tab split<CR>
+noremap <C-t> :tabe<CR>
 " Move around tabs with tn and ti
-noremap tn :-tabnext<CR>
-noremap ti :+tabnext<CR>
+noremap th :-tabnext<CR>
+noremap tl :+tabnext<CR>
 " Move the tabs with tmn and tmi
-noremap tmn :-tabmove<CR>
-noremap tmi :+tabmove<CR>
+noremap tmh :-tabmove<CR>
+noremap tml :+tabmove<CR>
 
 
 " ===
@@ -566,6 +565,10 @@ Plug 'lambdalisue/suda.vim' " do stuff like :sudowrite
 " Plug 'kana/vim-textobj-user'
 " Plug 'roxma/nvim-yarp'
 
+" ===
+" === vim-templates
+" ===
+Plug 'tibabit/vim-templates'
 
 call plug#end()
 set re=0
@@ -727,9 +730,9 @@ nmap <leader>aw  <Plug>(coc-codeaction-selected)w
 noremap <silent> <leader>ts :CocList tasks<CR>
 " coc-snippets
 imap <C-l> <Plug>(coc-snippets-expand)
-vmap <C-e> <Plug>(coc-snippets-select)
-let g:coc_snippet_next = '<c-e>'
-let g:coc_snippet_prev = '<c-n>'
+vmap <C-j> <Plug>(coc-snippets-select)
+let g:coc_snippet_next = '<c-j>'
+let g:coc_snippet_prev = '<c-k>'
 imap <C-e> <Plug>(coc-snippets-expand-jump)
 let g:snips_author = 'David Chen'
 autocmd BufRead,BufNewFile tsconfig.json set filetype=jsonc
@@ -804,10 +807,10 @@ let g:Lf_PreviewCode = 1
 let g:Lf_ShowHidden = 1
 let g:Lf_ShowDevIcons = 1
 let g:Lf_CommandMap = {
-\   '<C-k>': ['<C-u>'],
-\   '<C-j>': ['<C-e>'],
-\   '<C-]>': ['<C-v>'],
-\   '<C-p>': ['<C-n>'],
+\   '<C-k>': ['<C-k>'],
+\   '<C-j>': ['<C-j>'],
+\   '<C-]>': ['<C-]>'],
+\   '<C-p>': ['<C-p>'],
 \}
 let g:Lf_UseVersionControlTool = 0
 let g:Lf_IgnoreCurrentBufferName = 1
@@ -937,7 +940,7 @@ let g:bullets_enabled_file_types = [
 " === Vista.vim
 " ===
 noremap <LEADER>v :Vista!!<CR>
-noremap <c-t> :silent! Vista finder coc<CR>
+" noremap <c-t> :silent! Vista finder coc<CR>
 let g:vista_icon_indent = ["╰─▸ ", "├─▸ "]
 let g:vista_default_executive = 'coc'
 let g:vista_fzf_preview = ['right:50%']
@@ -1003,7 +1006,7 @@ augroup calendar-mappings
 	autocmd FileType calendar nmap <buffer> n <Plug>(calendar_left)
 	autocmd FileType calendar nmap <buffer> e <Plug>(calendar_down)
 	autocmd FileType calendar nmap <buffer> i <Plug>(calendar_right)
-	autocmd FileType calendar nmap <buffer> <c-u> <Plug>(calendar_move_up)
+	autocmd FileType calendar nmap <buffer> <c-k> <Plug>(calendar_move_up)
 	autocmd FileType calendar nmap <buffer> <c-n> <Plug>(calendar_move_left)
 	autocmd FileType calendar nmap <buffer> <c-e> <Plug>(calendar_move_down)
 	autocmd FileType calendar nmap <buffer> <c-i> <Plug>(calendar_move_right)
@@ -1364,6 +1367,11 @@ let g:lazygit_floating_window_scaling_factor = 1.0 " scaling factor for floating
 let g:lazygit_floating_window_corner_chars = ['╭', '╮', '╰', '╯'] " customize lazygit popup window corner characters
 let g:lazygit_use_neovim_remote = 1 " for neovim-remote support
 
+" ===
+" === vim-plug
+" ===
+let g:tmpl_search_paths = [$HOME.'/.config/nvim/templates']
+let g:tmpl_auto_initialize = 1
 
 " ===================== End of Plugin Settings =====================
 

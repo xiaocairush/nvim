@@ -1,4 +1,4 @@
-## <center>The Ultimate NeoVim Config for [Colemak](https://colemak.com/) Users</center>
+## <center>The Ultimate NeoVim Config
 
 <center><img src="https://raw.githubusercontent.com/theniceboy/nvim/master/demo.png"></center>
 
@@ -116,30 +116,30 @@ Please **DO NOT** just copy this configuration folder without really looking at 
 #### 1.2 Remapped Cursor Movement
 | Shortcut   | Action                                                    | Equivalent |
 |------------|-----------------------------------------------------------|------------|
-| `u`        | Cursor up a terminal line                                 | `k`        |
-| `e`        | Cursor down a terminal line                               | `j`        |
-| `n`        | Cursor left                                               | `h`        |
-| `i`        | Cursor right                                              | `l`        |
-| `U`        | Cursor up 5 terminal lines                                | `5k`       |
-| `E`        | Cursor down 5 terminal lines                              | `5j`       |
+| `k`        | Cursor up a terminal line                                 | `k`        |
+| `j`        | Cursor down a terminal line                               | `j`        |
+| `h`        | Cursor left                                               | `h`        |
+| `l`        | Cursor right                                              | `l`        |
+| `K`        | Cursor up 5 terminal lines                                | `5k`       |
+| `J`        | Cursor down 5 terminal lines                              | `5j`       |
 | `N`        | Cursor to the start of the line                           | `0`        |
 | `I`        | Cursor to the end of the line                             | `$`        |
 | `Ctrl` `u` | Move the view port up 5 lines without moving the cursor   | `Ctrl` `y` |
 | `Ctrl` `e` | Move the view port down 5 lines without moving the cursor | `Ctrl` `e` |
-| `h`        | Move to the end of this word                              | `e`        |
+| `E`        | Move to the end of this word                              | `e`        |
 | `W`        | Move cursor five words forward                            | `5w`       |
 | `B`        | Move cursor five words forward                            | `5b`       |
 
 #### 1.3 Remapped Insert Mode Keys
 | Shortcut   | Action                                                               |
 |------------|----------------------------------------------------------------------|
-| `Ctrl` `a` | Move cursor to the end of the line                                   |
-| `Ctrl` `u` | Move the character on the right of the cursor to the end of the line |
+|`Ctrl` `a` | Move cursor to the end of the line                                   |
+|`Ctrl` `u` | Move the character on the right of the cursor to the end of the line | 
 
 #### 1.4 Remapped Text Manipulating Commands in Normal Mode
 | Shortcut        | Action                                |
 |-----------------|---------------------------------------|
-| `l`             | **undo**                              |
+| `u`             | **undo**                              |
 | `<`             | Un-indent                             |
 | `>`             | Indent                                |
 | `SPACE` `SPACE` | Goto the next placeholder (`<++>`)    |
@@ -165,43 +165,44 @@ Please **DO NOT** just copy this configuration folder without really looking at 
 
 ### 2 Window Management
 #### 2.1 Creating Window Through Split Screen
-| Shortcut    | Action                                                                      |
-|-------------|-----------------------------------------------------------------------------|
-| `s` `u`     | Create a new horizontal split screen and place it above the current window  |
-| `s` `e`     | Create a new horizontal split screen and place it below the current window  |
-| `s` `n`     | Create a new vertical split screen and place it left to the current window  |
-| `s` `i`     | Create a new vertical split screen and place it right to the current window |
-| `s` `v`     | Set the two splits to be vertical                                           |
-| `s` `h`     | Set the two splits to be horizontal                                         |
-| `s` `r` `v` | Rotate splits and arrange splits vertically                                 |
-| `s` `r` `h` | Rotate splits and arrange splits horizontally                               |
+| Shortcut     | Action                                                                      |
+|--------------|-----------------------------------------------------------------------------|
+| `s` `k`      | Create a new horizontal split screen and place it above the current window  |
+| `s` `j`      | Create a new horizontal split screen and place it below the current window  |
+| `s` `h`      | Create a new vertical split screen and place it left to the current window  |
+| `s` `l`      | Create a new vertical split screen and place it right to the current window |
+| `s` ` t` `h` | Set the two splits to be horizontal                                         |
+| `s` `r` `v`  | Rotate splits and arrange splits vertically                                 |
+| `s` `r` `h`  | Rotate splits and arrange splits horizontally                               |
 
 #### 2.2 Moving the Cursor Between Different Windows
 | Shortcut      | Action                         |
 |---------------|--------------------------------|
 | `SPACE` + `w` | Move cursor to the next window |
-| `SPACE` + `n` | Move cursor one window left    |
-| `SPACE` + `i` | Move cursor one window right   |
-| `SPACE` + `u` | Move cursor one window up      |
-| `SPACE` + `e` | Move cursor one window down    |
+| `SPACE` + `h` | Move cursor one window left    |
+| `SPACE` + `l` | Move cursor one window right   |
+| `SPACE` + `k` | Move cursor one window up      |
+| `SPACE` + `j` | Move cursor one window down    |
 
 #### 2.3 Resizing Different Windows
 Use the arrow keys to resize the current window.
 
 #### 2.4 Closing Windows
-| Shortcut    | Action                                                                                                     |
-|-------------|------------------------------------------------------------------------------------------------------------|
-| `Q`         | Close the current window                                                                                   |
-| `SPACE` `q` | Close the window below the current window. (The current window will be closed if there is no window below) |
+| Shortcut    | Action                                       |
+|-------------|----------------------------------------------|
+| `Q`         | Close the current window                     |
+| `S`         | Save current file                            |
+| `SPACE` `q` | Close the window below the current window.\n
+(The current window will be closed if there is no window below) |
 
 ### 3 Tab Management
-| Shortcut    | Action           |
-|-------------|------------------|
-| `t` `u`     | Create a new tab |
-| `t` `n`     | Go one tab left  |
-| `t` `i`     | Go One tab right |
-| `t` `m` `n` | Move tab left    |
-| `t` `m` `i` | Move tab right   |
+| Shortcut    | Action                                     |
+|-------------|--------------------------------------------|
+| `Ctrl``t`   | Create a new tab                           |
+| `t` `h`     | Go one tab left                            |
+| `t` `l`     | Go One tab right                           |
+| `t` `m` `h` | Move tab left                              |
+| `t` `m` `l` | Move tab right                             |
 
 ### 4 Terminal Keyboard Shortcuts
 | Shortcut    | Action                                                      |
@@ -225,9 +226,9 @@ Use the arrow keys to resize the current window.
 #### [coc-snippets](https://github.com/neoclide/coc-snippets)
 | Shortcut   | Action                                           |
 |------------|--------------------------------------------------|
-| `Ctrl` `e` | Expand a snippet                                 |
-| `Ctrl` `n` | (in snippet) Previous Cursor position in snippet |
-| `Ctrl` `e` | (in snippet) Next Cursor position in snippet     |
+| `Ctrl` `l` | Expand a snippet                                 |
+| `Ctrl` `k` | (in snippet) Previous Cursor position in snippet |
+| `Ctrl` `j` | (in snippet) Next Cursor position in snippet     |
 
 ![GIF Demo](https://raw.github.com/SirVer/ultisnips/master/doc/demo.gif)
 
@@ -254,7 +255,7 @@ And Within rnvimr (ranger), you can:
 
 <img alt="Gif" src="https://user-images.githubusercontent.com/17562139/74416173-b0aa8600-4e7f-11ea-83b5-31c07c384af1.gif" width="60%" />
 
-#### [FZF - the fuzzy file finder](https://github.com/junegunn/fzf.vim)
+#### [FZF - the fuzzy file finder](https://github.com/junegunn/fzf)
 | Shortcut   | Action             |
 |------------|--------------------|
 | `Ctrl` `p` | **FZF Files**      |

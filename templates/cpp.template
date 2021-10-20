@@ -1,0 +1,53 @@
+#include<bits/stdc++.h>
+using namespace std;
+#define gc getchar_unlocked
+#define ll long long
+#define PI 3.1415926535897932384626
+#define si(x) scanf("%d", &x)
+#define sl(x) scanf("%lld", &x)
+#define ss(s) scanf("%s", s)
+#define pi(x) printf("%d\n", x)
+#define pl(x) printf("%lld\n", x)
+#define ps(s) printf("%s\n", s)
+#define br printf("\n")
+#define rep(i,a,b) for(int i = (a); i < (b); i++)
+#define repr(i,a,b) for(int i = (a); i >= (b); i--)
+#define repn(i,a,n) for(int i = (a); i <= (n); i++)
+#define pb push_back
+#define mp make_pair
+#define all(x) x.begin(), x.end()
+#define rall(x) x.rbegin(), x.rend()
+#define clr(x) memset(x, 0, sizeof(x))
+#define sortall(x) sort(all(x))
+#define tr(it, x) for(auto it = x.begin(); it != x.end(); it++)
+#define trr(it, x) for(auto it = x.rbegin(); it != x.rend(); it+)
+typedef pair<int, int> pii;
+typedef pair<ll, ll> pl;
+typedef vector<int> vi;
+typedef vector<ll> vl;
+typedef vector<pii> vpii;
+typedef vector<pl> vpl;
+typedef vector<vi> vvi;
+typedef vector<vl> vvl;
+
+const int mod = 1000000007;
+const int N = 1e5;
+
+vi u[N], v[N];
+int a[N], f[N];
+
+void solution() {
+    int n, m;
+
+}
+
+int main() {
+
+    int t = 1;
+    si(t);
+    while(t--) {
+        solution();
+    }
+
+    return 0;
+}
